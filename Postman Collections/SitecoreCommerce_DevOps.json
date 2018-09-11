@@ -94,6 +94,46 @@
             "url": "{{ServiceHost}}/{{ShopsApi}}/CreateComposerTemplatesCommand()"
           },
           "response": []
+        },
+        {
+          "_postman_id": "450b6e23-c245-4b8c-8a73-536456b48a3d",
+          "name": "JMM Create Composer Templates Copy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{SitecoreIdToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Environment",
+                "value": "{{Environment}}"
+              },
+              {
+                "key": "ShopName",
+                "value": "{{ShopName}}"
+              },
+              {
+                "key": "ShopperId",
+                "value": "{{ShopperId}}"
+              },
+              {
+                "key": "Language",
+                "value": "{{Language}}"
+              },
+              {
+                "key": "CustomerId",
+                "value": "{{CustomerId}}"
+              }
+            ],
+            "body": {},
+            "url": "{{ServiceHost}}/{{ShopsApi}}/CreateComposerTemplatesCommand()"
+          },
+          "response": []
         }
       ]
     },
