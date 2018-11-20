@@ -57,7 +57,7 @@
         },
         {
           "_postman_id": "f10f48a2-c5a8-47a8-81b4-571162d88bae",
-          "name": "Bootstrap JMM Copy",
+          "name": "JMM FD Response",
           "request": {
             "method": "PUT",
             "header": [
