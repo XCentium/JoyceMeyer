@@ -56,6 +56,30 @@
           "response": []
         },
         {
+          "_postman_id": "f10f48a2-c5a8-47a8-81b4-571162d88bae",
+          "name": "Bootstrap JMM Copy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{SitecoreIdToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"environment\":\"{{HostingEnvironment}}\"}"
+            },
+            "url": "{{ServiceHost}}/{{ShopsApi}}/JmmBootstrap()",
+            "description": "This call will set up an initial install by adding any necessary artifacts to the Global Environment and creating any other logical environments.\nThis can be run at any time and will rewrite environments to their original states from the environment data stored here:\n~\\wwwroot\\data\\Environments"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "b1b6fb14-79d9-4f56-baf3-0e414b2bf9e7",
           "name": "JMM Create Composer Templates",
           "request": {
@@ -97,7 +121,7 @@
         },
         {
           "_postman_id": "450b6e23-c245-4b8c-8a73-536456b48a3d",
-          "name": "JMM Create Composer Templates Copy",
+          "name": "Ethereum Create Composer Templates",
           "request": {
             "method": "PUT",
             "header": [
@@ -131,7 +155,7 @@
               }
             ],
             "body": {},
-            "url": "{{ServiceHost}}/{{ShopsApi}}/CreateComposerTemplatesCommand()"
+            "url": "{{ServiceHost}}/{{ShopsApi}}/CreateEthereumComposerTemplatesCommand()"
           },
           "response": []
         }
