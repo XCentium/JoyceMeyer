@@ -32,30 +32,6 @@
           "response": []
         },
         {
-          "_postman_id": "acdfa3b0-049f-49ba-a3a2-bde23faf801b",
-          "name": "Bootstrap JMM",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{SitecoreIdToken}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"environment\":\"{{HostingEnvironment}}\"}"
-            },
-            "url": "{{ServiceHost}}/{{ShopsApi}}/JmmBootstrap()",
-            "description": "This call will set up an initial install by adding any necessary artifacts to the Global Environment and creating any other logical environments.\nThis can be run at any time and will rewrite environments to their original states from the environment data stored here:\n~\\wwwroot\\data\\Environments"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "f10f48a2-c5a8-47a8-81b4-571162d88bae",
           "name": "JMM FD Response",
           "request": {
@@ -817,7 +793,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"minionFullName\":\"JoyceMeyer.Commerce.Plugin.Minions.OrderSubmission.Minions.OrderExportMinion, Sitecore.Commerce.Plugin.Orders\",\n    \"environmentName\": \"{{MinionsEnvironment}}\"\n}\n"
+              "raw": "{\n    \"minionFullName\":\"JoyceMeyer.Commerce.Plugin.Minions.OrderSubmission.Minions.OrderExportMinion, JoyceMeyer.Commerce.Plugin.Minions.OrderSubmission\",\n    \"environmentName\": \"{{MinionsEnvironment}}\"\n}\n"
             },
             "url": "{{MinionsHost}}/{{OpsApi}}/RunMinion()"
           },
