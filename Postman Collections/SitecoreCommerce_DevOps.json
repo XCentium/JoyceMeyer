@@ -72,9 +72,26 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"environment\":\"{{HostingEnvironment}}\"}"
+              "raw": "{\"id\":\"asd\"}"
             },
-            "url": "{{ServiceHost}}/{{ShopsApi}}/JmmBootstrap()",
+            "url": {
+              "raw": "{{ServiceHost}}/{{ShopsApi}}/SampleCommand()",
+              "host": [
+                "{{ServiceHost}}"
+              ],
+              "path": [
+                "{{ShopsApi}}",
+                "SampleCommand()"
+              ],
+              "query": [
+                {
+                  "key": "Id",
+                  "value": "asd",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
             "description": "This call will set up an initial install by adding any necessary artifacts to the Global Environment and creating any other logical environments.\nThis can be run at any time and will rewrite environments to their original states from the environment data stored here:\n~\\wwwroot\\data\\Environments"
           },
           "response": []
@@ -778,6 +795,29 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"minionFullName\":\"Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionBoss, Sitecore.Commerce.Plugin.Orders\",\n    \"environmentName\": \"{{MinionsEnvironment}}\"\n}\n"
+            },
+            "url": "{{MinionsHost}}/{{OpsApi}}/RunMinion()"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a2b10a64-8e0e-43d3-80e2-ff03e210aef7",
+          "name": "JMM Submit Pending Orders",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{SitecoreIdToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"minionFullName\":\"JoyceMeyer.Commerce.Plugin.Minions.OrderSubmission.Minions.OrderExportMinion, Sitecore.Commerce.Plugin.Orders\",\n    \"environmentName\": \"{{MinionsEnvironment}}\"\n}\n"
             },
             "url": "{{MinionsHost}}/{{OpsApi}}/RunMinion()"
           },
